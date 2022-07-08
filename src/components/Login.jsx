@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Register.css';
 
-const Login = () => {
+const Login = ({ setUserLoggedIn }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -16,18 +16,15 @@ const Login = () => {
         password,
       })
       .then(response => {
-        console.log('response', response);
-        localStorage.setItem(
-          'token',
-          JSON.stringify({
-            userLogin: true,
-            token: response.data.token,
-          })
-        );
-        setEmail('');
-        setPassword('');
+        if (response.data.token) {
+          console.log('response', response);
+          localStorage.setItem('token', response.data.token);
+          setEmail('');
+          setPassword('');
+          setUserLoggedIn(true);
+          navigate('/');
+        }
       });
-    navigate('/');
   };
   return (
     <div>
