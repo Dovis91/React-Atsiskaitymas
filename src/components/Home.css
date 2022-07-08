@@ -1,0 +1,37 @@
+/* blog previews / list */
+
+.blog-list {
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blog-preview {
+  gap: 20px;
+  padding: 10px 16px;
+  margin: 20px 20px;
+  border-bottom: 1px solid #fafafa;
+  max-width: 300px;
+}
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.blog-preview h2 {
+  font-size: 20px;
+  color: #ef816c;
+  margin-bottom: 8px;
+}
+.blog-preview a {
+  text-decoration: none;
+}
+
+.logIn {
+  padding-top: 6rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #cc6666;
+  display: flex;
+  justify-content: center;
+}
