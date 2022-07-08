@@ -4,7 +4,7 @@
   list-style-type: none;
 }
 body {
-  background: #676870;
+  background: #d1d2d4;
 }
 .ulList {
   display: flex;
@@ -21,9 +21,10 @@ a {
 }
 .listItem {
   padding: 1rem 2rem 1.15rem;
+  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   cursor: pointer;
-  color: #ebebeb;
+  color: #3a3838;
   min-width: 80px;
   margin: auto;
   text-decoration: none;
