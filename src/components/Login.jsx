@@ -24,7 +24,8 @@ const Login = ({ setUserLoggedIn }) => {
           setUserLoggedIn(true);
           navigate('/');
         }
-      });
+      })
+      .catch(err => alert(err));
   };
   return (
     <div>
